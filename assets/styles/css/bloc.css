@@ -172,6 +172,10 @@ h6 {
   .container.\----d75 {
     width: 75%; }
 
+.hidden-label {
+  position: absolute;
+  left: -500000px; }
+
 iframe {
   height: 500px;
   width: 100%; }
