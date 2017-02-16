@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/*************************************************|
+| Welcome to Valoisa. This is the main file we'll |
+| compile our stylesheet from. If you want to add |
+| any of your own sass files, you should add them |
+| at the bottom of this file.                     |
+*************************************************/
+/*************************************************|
+| Helpers are classes that are useful but aren't  |
+| really considered to "style" the element.       |
+*************************************************/
+/*************************************************|
+| For elements that have floating elements inside |
+| of them, this causes the container to have the  |
+| proper height.
+*************************************************/
+@import url("https://fonts.googleapis.com/css?family=Muli:400,300,200");
+.cf:after, .container:after {
+  clear: both;
+  content: '';
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden; }
+
+/*************************************************|
+| Gotta put the mixins now so we have cool        |
+| functions to use to save us time and money.     |
+*************************************************/
+/*************************************************|
+| The breakpoint mixin, this will probably suit   |
+| your needs, but feel free to hack it if it      |
+| doesn't                                         |
+*************************************************/
+/*************************************************|
+| We just reset everything so all styles below    |
+| will be on a fresh canvas, delicious!  Just     |
+| some configuration then we can actually do some |
+| styling!
+*************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*************************************************|
+| Breakpoints                                     |
+*************************************************/
+/*************************************************|
+| Colours                                         |
+*************************************************/
+/*************************************************|
+| Font Settings - sizes in px                     |
+*************************************************/
+/*************************************************|
+| Container Variables                             |
+*************************************************/
+/*************************************************|
+| Transition Times                                |
+*************************************************/
+/*************************************************|
+| Put your fonts in here                          |
+*************************************************/
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url("./../fonts/CenturyGothic.eot");
+  src: local("☺"), url("./../fonts/CenturyGothic.ttf"); }
+
+@font-face {
+  font-family: 'CenturyGothicBold';
+  src: url("./../fonts/CenturyGothicBold.eot");
+  src: local("☺"), url("../../fonts/CenturyGothicBold.ttf"); }
+
+html {
+  color: #0d0d0d;
+  font-family: "Muli", sans-serif;
+  font-size: 16px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "CenturyGothic", sans-serif;
+  font-weight: 700; }
+
+h1 {
+  font-size: 3em;
+  margin: 0.563em 0; }
+
+h2 {
+  font-size: 2.25em;
+  margin: 0.625em 0; }
+
+h3 {
+  font-size: 1.5em;
+  margin: 1.313em 0; }
+
+h4 {
+  font-size: 1.313em;
+  margin: 1.313em 0; }
+
+h5 {
+  font-size: 1.125em;
+  margin: 1.313em 0; }
+
+h6 {
+  font-size: 1em;
+  margin: 0.75em 0; }
+
+/*************************************************|
+| Now we can actually get on with making the site |
+| styles                                          |
+*************************************************/
+/*************************************************|
+| Container                                       |
+*************************************************/
+.container {
+  padding: 0 28px; }
+  @media (min-width: 960px) {
+    .container {
+      margin: 0 auto;
+      max-width: 1400px;
+      padding: 0;
+      width: 90%; } }
+  @media (min-width: 1260px) {
+    .container {
+      width: 85%; } }
+  .container.\----d75 {
+    width: 75%; }
+
+iframe {
+  height: 500px;
+  width: 100%; }
